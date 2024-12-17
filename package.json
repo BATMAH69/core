@@ -31,6 +31,7 @@
     "test:integration:fork:local": "hardhat test test/integration/**/*.ts --network local",
     "test:integration:fork:mainnet": "hardhat test test/integration/**/*.ts --network mainnet-fork",
     "test:integration:fork:mainnet:ci": "hardhat test test/integration/ci.integration.ts --network mainnet-fork",
+    "test:fork:mainnet:ci": "hardhat test --network mainnet-fork",
     "typecheck": "tsc --noEmit",
     "prepare": "husky",
     "abis:extract": "hardhat abis:extract",
