@@ -8,7 +8,7 @@ describe("Fast tests for testing CI integration", () => {
 
     const { lido } = contracts;
 
-    const balance3 = await lido.balanceOf("0x0000000000000000000000000000000000000003");
+    const balance3 = await lido.balanceOf("0x0000000000000000000000000000000000000777");
 
     expect(balance3).to.be.equal(0);
   });
