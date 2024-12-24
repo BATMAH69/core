@@ -4,9 +4,13 @@ import { MiniMeToken } from "typechain-types";
 
 import { loadContract } from "lib";
 
+import { parseDeploymentJson } from "../../lib/protocol/networks";
+
 describe("Fast tests for testing CI integration", () => {
-  it("Check LDO amount at address 3", async () => {
-    const ldo = await loadContract<MiniMeToken>("MiniMeToken", "0x5A98FcBEA516Cf06857215779Fd812CA3beF1B32");
+  it("Check LDO amount at address 777", async () => {
+    const config = await parseDeploymentJson("mainnet");
+
+    const ldo = await loadContract<MiniMeToken>("MiniMeToken", config.daoTokenAddress);
 
     const balance = await ldo?.balanceOf("0x0000000000000000000000000000000000000777");
 
